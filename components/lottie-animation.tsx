@@ -1,14 +1,10 @@
-"use client";
+"use client"
+import dynamic from "next/dynamic";
+import animationData from "../public/hero-animation.json";
 
-import React from "react";
-import Lottie from "lottie-react";
-import animationData from "../public/hero-animation.json"; 
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
-interface LottieAnimationProps {
-  className?: string;
-}
-
-const LottieAnimation: React.FC<LottieAnimationProps> = ({ className }) => {
+const LottieAnimation = ({ className }: { className?: string }) => {
   return (
     <div className={className}>
       <Lottie animationData={animationData} loop={true} />
