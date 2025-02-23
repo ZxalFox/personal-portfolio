@@ -41,10 +41,3 @@ body {
   animation: fadeIn 1s ease-out forwards;
 }
 
-.animate-delay-500 {
-  animation-delay: 0.5s;
-}
-
-.animate-delay-1000 {
-  animation-delay: 1s;
-}

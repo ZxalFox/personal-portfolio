@@ -5,7 +5,7 @@ import LottieAnimation from "./lottie-animation";
 const HeroSection = () => {
   return (
     <section
-      className="bg-center bg-cover bg-no-repeat"
+      className="bg-bottom bg-cover bg-no-repeat "
       style={{ backgroundImage: `url('${heroBg.src}')` }}
     >
       <div className="text-center flex flex-col justify-center items-center text-white px-5 py-20 sm:px-10">
@@ -22,7 +22,7 @@ const HeroSection = () => {
           Know more
         </Link>
         <div className="mt-10">
-          <LottieAnimation className="w-full xl:w-[20rem]" />
+          <LottieAnimation className="w-full sm:w-[20rem]" />
         </div>
       </div>
     </section>

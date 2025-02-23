@@ -2,7 +2,7 @@
 
 import React from "react";
 import Lottie from "lottie-react";
-import animationData from "../public/"; // Ajuste o caminho conforme necessário
+import animationData from "../public/hero-animation.json"; 
 
 interface LottieAnimationProps {
   className?: string;
