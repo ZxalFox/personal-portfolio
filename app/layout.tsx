@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 const firaCode = {
-  subsets: ['latin'],
-  variable: '--font-fira-code',
+  subsets: ["latin"],
+  variable: "--font-fira-code",
 };
 
 export const metadata: Metadata = {
@@ -19,14 +19,18 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-      <link
+        <link
           href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          rel="preload"
+          href="../public/hero-animation.json"
+          as="fetch"
+          crossOrigin="anonymous"
+        />
       </head>
-      <body
-        className={`${firaCode.variable} font-sans antialiased`}
-      >
+      <body className={`${firaCode.variable} font-sans antialiased`}>
         {children}
       </body>
     </html>

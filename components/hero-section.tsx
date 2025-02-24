@@ -1,6 +1,8 @@
 import Link from "next/link";
 import heroBg from "../public/bg-hero.png";
 import LottieAnimation from "./lottie-animation";
+import animationData from "../public/hero-animation.json";
+import { Suspense } from "react";
 
 const HeroSection = () => {
   return (
@@ -22,7 +24,12 @@ const HeroSection = () => {
           Know more
         </Link>
         <div className="mt-10">
-          <LottieAnimation className="w-full sm:w-[20rem]" />
+          <Suspense fallback={<div>Loading...</div>}>
+            <LottieAnimation
+              className="w-full sm:w-[20rem]"
+              animationData={animationData}
+            />
+          </Suspense>
         </div>
       </div>
     </section>

@@ -13,18 +13,41 @@ import Image from "next/image";
 
 const SkillsSection = () => {
   const techStack = [
-    { name: "React.JS", level: 8, icon: react },
-    { name: "Next.JS", level: 7, icon: next },
-    { name: "Typescript", level: 7, icon: ts },
-    { name: "Ruby on Rails", level: 5, icon: rails },
-    { name: "PostgreSQL", level: 4, icon: postgres },
+    { name: "React.JS", level: 8, icon: react, adress: "https://react.dev/" },
+    { name: "Next.JS", level: 7, icon: next, adress: "https://nextjs.org/" },
+    {
+      name: "Typescript",
+      level: 7,
+      icon: ts,
+      adress: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "Ruby on Rails",
+      level: 5,
+      icon: rails,
+      adress: "https://rubyonrails.org/",
+    },
+    {
+      name: "PostgreSQL",
+      level: 4,
+      icon: postgres,
+      adress: "https://www.postgresql.org/",
+    },
   ];
 
   const otherTools = [
-    { name: "Tailwind CSS", icon: tailwind },
-    { name: "Bootstrap", icon: bootstrap },
-    { name: "Azure DevOps", icon: azureDevOps },
-    { name: "Cypress", icon: cypress },
+    {
+      name: "Tailwind CSS",
+      icon: tailwind,
+      adress: "https://tailwindcss.com/",
+    },
+    { name: "Bootstrap", icon: bootstrap, adress: "https://getbootstrap.com/" },
+    {
+      name: "Azure DevOps",
+      icon: azureDevOps,
+      adress: "https://azure.microsoft.com/en-us/services/devops/",
+    },
+    { name: "Cypress", icon: cypress, adress: "https://www.cypress.io/" },
   ];
 
   return (
@@ -47,7 +70,12 @@ const SkillsSection = () => {
           <div className="space-y-6 mt-10">
             {techStack.map((skill, index) => (
               <div key={index} className="flex gap-2 items-center">
-                <div className="flex justify-start w-24">
+                <a
+                  className="flex justify-center p-1 w-24 hover:bg-orange-200 rounded-lg transition duration-300 hover:cursor-pointer"
+                  href={skill.adress}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     width={500}
                     height={500}
@@ -55,7 +83,7 @@ const SkillsSection = () => {
                     alt={skill.name}
                     className="w-12 h-12"
                   />
-                </div>
+                </a>
                 <div className="space-y-2 w-full">
                   <div className="flex justify-between">
                     <span className="text-orange-800 font-medium">
@@ -81,9 +109,12 @@ const SkillsSection = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {otherTools.map((tool, index) => (
-              <div
+              <a
                 key={index}
-                className="bg-orange-100 text-orange-900 p-4 rounded-lg text-center font-medium hover:bg-orange-200 transition duration-300 border border-orange-200"
+                href={tool.adress}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-orange-100 text-orange-900 p-4 rounded-lg text-center font-medium hover:bg-orange-200 hover:cursor-pointer transition duration-300 border border-orange-200"
               >
                 <div className="flex items-center justify-center space-x-2 ">
                   <div>
@@ -97,7 +128,7 @@ const SkillsSection = () => {
                   </div>
                   <span>{tool.name}</span>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
