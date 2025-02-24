@@ -16,7 +16,7 @@ const HeroSection = () => {
           Hi! My name is Ayron, and I&apos;m a fullstack developer.
         </p>
         <Link
-          href="#about"
+          href="#skills"
           className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 animate-fade-in"
         >
           Know more
