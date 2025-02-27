@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "https://personal-portfolio-nine-beige-18.vercel.app/favicon.png",
+        url: "https://personal-portfolio-nine-beige-18.vercel.app/favicon.ico",
         width: 800,
         height: 800,
         alt: "Ayron Sanfra",
