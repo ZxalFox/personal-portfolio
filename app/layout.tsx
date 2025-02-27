@@ -1,31 +1,29 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import favicon from "./favicon.ico";
-import appleFavicon from "./favicon.png";
-
-const firaCode = {
-  subsets: ["latin"],
-  variable: "--font-fira-code",
-};
 
 export const metadata: Metadata = {
   title: "Ayron Sanfra",
   description:
     "Hi, I'm Ayron Sanfra, a fullstack software engineer and web developer.",
   openGraph: {
+    title: "Ayron Sanfra - Fullstack Software Engineer",
+    description:
+      "Hi, I'm Ayron Sanfra, a fullstack software engineer and web developer.",
     images: [
       {
-        url: "https://personal-portfolio-nine-beige-18.vercel.app/favicon.ico",
+        url: "https://personal-portfolio-nine-beige-18.vercel.app/opengraph-image.png",
         width: 800,
         height: 800,
-        alt: "Ayron Sanfra",
+        alt: "Ayron Sanfra - Fullstack Software Engineer",
       },
     ],
+    type: "website",
+    siteName: "Ayron Sanfra",
   },
   icons: {
-    icon: favicon.src,
-    shortcut: favicon.src,
-    apple: appleFavicon.src,
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.png",
   },
 };
 
@@ -43,14 +41,12 @@ export default function RootLayout({
         />
         <link
           rel="preload"
-          href="../public/hero-animation.json"
+          href="/hero-animation.json"
           as="fetch"
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${firaCode.variable} font-sans antialiased`}>
-        {children}
-      </body>
+      <body className={`font-sans antialiased`}>{children}</body>
     </html>
   );
 }
